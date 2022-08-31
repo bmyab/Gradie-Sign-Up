@@ -1,0 +1,169 @@
+:root{
+  --color-bg:rgba(1,50,67,255);
+  --color-cta:rgba(1,50,67,255);
+  --color-text-m:rgba(96,153,171,255);
+  --colort-text-2:rgba(1,50,67,255);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 1.6rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sign{
+  display: grid;
+  grid-template-rows: repeat(2 ,1fr);
+  height: 100vh;
+  width:100vw;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+.sign__bg{
+  text-align: center;
+  background-color: var(--color-bg);
+  padding: 0;
+  margin: 0;
+}
+.sign .texts{
+  padding-top: 2.5rem;
+}
+.sign h1{
+  color: white;
+  font-weight: 600;
+}
+.sign__bg p{
+  color: var(--color-text-m);
+  font-weight: 400;
+}
+.sign__bg img{
+  width: 100%;
+  display: block;
+}
+.sign__form{
+  margin-inline: auto;
+}
+.sign__form form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 31rem;
+  padding-block: 2rem;
+}
+.sign__form .input{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sign__form .input label{
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.sign__form .input input{
+  border : 1px solid #ccc;
+  padding: 1.3rem 2rem;
+  border-radius: 0.5rem;
+}
+.sign__form .input-check{
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  color: var(--colort-text-2);
+  font-weight: 500;
+}
+.sign__form .input-check a{
+  color: var(--colort-text-2);
+  font-weight: 700;
+}
+.sign__form .input-check label{
+  opacity: .5;
+}
+.sign__form .input-check input[type="checkbox"]:checked + label{
+  opacity: 1;
+}
+
+
+
+.sign__form button{
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background-color:var(--color-cta);
+  cursor: pointer;
+}
+.o-1{
+  opacity: .5;
+}
+.sign__form button.o-1{
+  cursor: not-allowed;
+}
+
+small{
+  color: red;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+
+@media screen and (min-width:890px) {
+  body{
+    background-image: url('../Background.png');
+    background-size: cover;
+  }
+  .sign{
+    place-items: center;
+    max-width: 90rem;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+  }
+  .sign__bg{
+    grid-row: 1/3;
+    max-width: 50rem;
+    height: 535px;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    overflow: hidden;
+  }
+  .sign__bg img{
+    width: 80%;
+    margin-inline: auto;
+  }
+  .sign__form{
+    grid-row:  1 /3;
+    align-self: center;
+    background-color: white;
+    width: 100%;
+    height: 535px;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }
+  .sign__form form{
+    gap: 2.5rem;
+    margin-inline: auto;
+    padding-block: 6rem;
+  }
+  .sign__form .input{
+    gap: 1rem;
+  }
+  .sign__form .input input{
+    padding: 1.5rem 2rem;
+  }
+  .sign__form button{
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
